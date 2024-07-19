@@ -1,12 +1,12 @@
-import './App.css'
+import "./App.css";
+import WhiteSpace from "./components/WhiteSpace/WhiteSpace";
 
 function App() {
-
   return (
     <>
-      
+      <WhiteSpace />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
