@@ -1,4 +1,3 @@
-import { ReactNode } from 'react'
 import {
   Box,
   Container,
@@ -10,6 +9,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 import { FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa'
+import {  Button, VStack, HStack, Image } from '@chakra-ui/react';
 
 const ListHeader = ({ children }) => {
   return (
@@ -46,13 +46,50 @@ const SocialButton = ({
   )
 }
 
-export default function LargeWithAppLinksAndSocial() {
+export default function Footer() {
   return (
+  <>
+      <Container maxW="container.xl" mt={5}>
+        <VStack spacing={8}>
+          <HStack spacing={8} width="full" flexWrap="wrap" justifyContent="center">
+            <Box 
+              flex="1" 
+              borderWidth="1px" 
+              borderRadius="lg" 
+              overflow="hidden" 
+              padding="6" 
+              boxShadow="md" 
+              maxW="sm"
+              margin="10px"
+            >
+              <Text fontSize="xl" mb={4} textAlign="center">Build Your ER Diagram</Text>
+              <Image src="https://static-cse.canva.com/blob/994667/graph_er-diagram-maker_history_2x.jpg" alt="ER Diagram" mb={4} />
+              <Button colorScheme="teal" width="full">Start Building</Button>
+            </Box>
+            <Box 
+              flex="1" 
+              borderWidth="1px" 
+              borderRadius="lg" 
+              overflow="hidden" 
+              padding="6" 
+              boxShadow="md" 
+              maxW="sm"
+              margin="10px"
+            >
+              <Text fontSize="xl" mb={4} textAlign="center">Build Your ER Diagram</Text>
+              <Image src="https://static-cse.canva.com/blob/994667/graph_er-diagram-maker_history_2x.jpg" alt="ER Diagram" mb={4} />
+              <Button colorScheme="teal" width="full">Start Building</Button>
+            </Box>
+          </HStack>
+        </VStack>
+      </Container>
+
+
     <Box
       bg={useColorModeValue('gray.50', 'gray.900')}
       color={useColorModeValue('gray.700', 'gray.200')}>
-      <Container as={Stack} maxW={'6xl'} py={10}>
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
+      <Container as={Stack} maxW={'8xl'} py={10}>
+        <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={8} alignItems='center'>
           <Stack align={'flex-start'}>
             <ListHeader>Company</ListHeader>
             <Box as="a" href={'#'}>
@@ -60,9 +97,6 @@ export default function LargeWithAppLinksAndSocial() {
             </Box>
             <Box as="a" href={'#'}>
               Blog
-            </Box>
-            <Box as="a" href={'#'}>
-              Careers
             </Box>
             <Box as="a" href={'#'}>
               Contact Us
@@ -106,13 +140,14 @@ export default function LargeWithAppLinksAndSocial() {
         borderColor={useColorModeValue('gray.200', 'gray.700')}>
         <Container
           as={Stack}
-          maxW={'6xl'}
+          maxW={'10xl'}
           py={4}
           direction={{ base: 'column', md: 'row' }}
           spacing={4}
           justify={{ md: 'space-between' }}
-          align={{ md: 'center' }}>
-          <Text>© 2022 Chakra Templates. All rights reserved</Text>
+          align={{ md: 'center' }}
+          bg="teal.500">
+          <Text>© 2024  ER Diagram Builder. All rights reserved</Text>
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />
@@ -127,5 +162,6 @@ export default function LargeWithAppLinksAndSocial() {
         </Container>
       </Box>
     </Box>
+  </>
   )
 }
