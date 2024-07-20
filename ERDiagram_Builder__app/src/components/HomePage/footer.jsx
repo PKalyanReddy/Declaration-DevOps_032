@@ -64,23 +64,23 @@ export default function Footer() {
             >
               <Text fontSize="xl" mb={4} textAlign="center">Build Your ER Diagram</Text>
               <Image src="https://static-cse.canva.com/blob/994667/graph_er-diagram-maker_history_2x.jpg" alt="ER Diagram" mb={4} />
-              <Button colorScheme="teal" width="full">Start Building</Button>
+              <Button colorScheme="teal" width="full" fontSize="lg">Start Building</Button>
             </Box>
             <Box 
               flex="1" 
-              borderWidth="1px" 
+              // borderWidth="1px" 
               borderRadius="lg" 
-              overflow="hidden" 
-              padding="6" 
-              boxShadow="md" 
-              maxW="sm"
-              margin="10px"
+              // overflow="hidden" 
+              // padding="6" 
+              // boxShadow="md" 
+              // maxW="sm"
+              // margin="10px"
             >
-              <Text fontSize="xl" mb={4} textAlign="center">Build Your ER Diagram</Text>
-              <Image src="https://static-cse.canva.com/blob/994667/graph_er-diagram-maker_history_2x.jpg" alt="ER Diagram" mb={4} />
-              <Button colorScheme="teal" width="full">Start Building</Button>
+              {/* <Text fontSize="xl" mb={4} textAlign="center">Build Your ER Diagram</Text> */}
+              <Image src="https://i.pinimg.com/originals/0b/75/24/0b752417b0c83b2c273e0bb9bbec50bc.gif" alt="ER Diagram" mb={4} />
+              {/* <Button colorScheme="teal" width="full" fontSize="lg">Start Building</Button> */}
             </Box>
-          </HStack>
+          </HStack> 
         </VStack>
       </Container>
 

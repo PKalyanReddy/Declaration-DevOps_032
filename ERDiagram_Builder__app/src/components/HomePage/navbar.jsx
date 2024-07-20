@@ -60,10 +60,10 @@ export default function Navbar() {
             src="https://i.ibb.co/Y4Shmrm/ER-Diagram-logo.jpg"
             objectFit="contain"
             alt="logo"
-            width='80px'
+            width='100px'
           />
 
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
+          <Flex display={{ base: "none", md: "flex" }} ml={1} mt={3}>
             <DesktopNav />
           </Flex>
         </Flex>
@@ -76,7 +76,7 @@ export default function Navbar() {
         >
           <Button
             as={"a"}
-            fontSize={"sm"}
+            fontSize={"lg"}
             fontWeight={400}
             variant={"link"}
             href={"home"}
@@ -86,7 +86,7 @@ export default function Navbar() {
           <Button
             as={"a"}
             display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
+            fontSize={"lg"}
             fontWeight={600}
             color={"white"}
             bg={"blue.300"}
@@ -122,7 +122,7 @@ const DesktopNav = () => {
                 as="a"
                 p={2}
                 href={navItem.href ?? "#"}
-                fontSize={"sm"}
+                fontSize={"md"}
                 fontWeight={500}
                 color={linkColor}
                 _hover={{
