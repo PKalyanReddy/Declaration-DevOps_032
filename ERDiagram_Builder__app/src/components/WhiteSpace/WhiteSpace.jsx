@@ -131,8 +131,6 @@
 
 // export default WhiteSpace;
 
-
-
 import React, { useState, useCallback } from "react";
 import {
   ReactFlow,
@@ -144,6 +142,7 @@ import {
   Background,
   Handle,
   Position,
+  MarkerType,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import {
@@ -153,7 +152,7 @@ import {
   RectangleNode,
   SquareNode,
 } from "../Another/Shapes";
-import { ColorModeContext, Flex } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import ColorModeFlow from "../ColorMode/ColorModeFlow";
 import { ExportButton } from "../ExportButton/ExportButton";
 
@@ -175,8 +174,33 @@ const WhiteSpace = () => {
   const [newLabel, setNewLabel] = useState("");
   const [colorMode, setColorMode] = useState("dark");
 
+  // const onConnect = useCallback(
+  //   (params) =>
+  //     setEdges((eds) => addEdge({ ...params, type: "smoothstep" }, eds)),
+  //   [setEdges]
+  // );
   const onConnect = useCallback(
-    (params) => setEdges((eds) => addEdge(params, eds)),
+    (params) => {
+      setEdges((eds) =>
+        addEdge(
+          {
+            ...params,
+            type: "smoothstep",
+            markerEnd: {
+              // type: MarkerType.ArrowClosed,
+              width: 10,
+              height: 10,
+              color: "#3470e4",
+            },
+            style: {
+              strokeWidth: 2,
+              stroke: "#3470e4",
+            },
+          },
+          eds
+        )
+      );
+    },
     [setEdges]
   );
 
@@ -194,7 +218,8 @@ const WhiteSpace = () => {
     setNodes((nds) => nds.filter((node) => node.id !== selectedNodeId));
     setEdges((eds) =>
       eds.filter(
-        (edge) => edge.source !== selectedNodeId && edge.target !== selectedNodeId
+        (edge) =>
+          edge.source !== selectedNodeId && edge.target !== selectedNodeId
       )
     );
     setSelectedNodeId(null);
@@ -218,10 +243,15 @@ const WhiteSpace = () => {
 
   return (
     <div className="White-space">
-      <div className="sidebar" style={{ position: "relative", top: 0, left: 0, zIndex: 10 }}>
+      <div
+        className="sidebar"
+        style={{ position: "relative", top: 0, left: 0, zIndex: 10 }}
+      >
         <h2>Tools</h2>
         <button onClick={() => addNode("rectangle")}>Add Rectangle</button>
-        <button onClick={() => addNode("parallelogram")}>Add Parallelogram</button>
+        <button onClick={() => addNode("parallelogram")}>
+          Add Parallelogram
+        </button>
         <button onClick={() => addNode("circle")}>Add Circle</button>
         <button onClick={() => addNode("square")}>Add Square</button>
         <button onClick={() => addNode("diamond")}>Add Diamond</button>
@@ -236,13 +266,28 @@ const WhiteSpace = () => {
               onChange={handleLabelChange}
               placeholder="New Label"
             />
-            <button onClick={applyLabelChange} style={{ backgroundColor: "black", color: "white" }}>
+            <button
+              onClick={applyLabelChange}
+              style={{
+                backgroundColor: "#111316",
+                color: "white",
+                padding: "10px  ",
+              }}
+            >
               Change Label
             </button>
           </>
         )}
       </div>
-      <div id="whiteBoard" style={{ width: "80%", height: "100vh", border: "1px solid", backgroundColor: colorMode === "dark" ? "#333" : "#fff", }}>
+      <Box
+        id="whiteBoard"
+        style={{
+          width: "80%",
+          height: "100vh",
+          border: "1px solid",
+          backgroundColor: colorMode === "dark" ? "#333" : "#fff",
+        }}
+      >
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -252,13 +297,15 @@ const WhiteSpace = () => {
           onNodeClick={(_, node) => setSelectedNodeId(node.id)}
           nodeTypes={nodeTypes}
         >
+          <ExportButton elementId="whiteBoard" />
           <Controls />
-          <MiniMap style={{backgroundColor: colorMode === "dark" ? "#333" : "gray"}} />
+          <MiniMap
+            style={{ backgroundColor: colorMode === "dark" ? "#333" : "gray" }}
+          />
           <Background />
-          <ColorModeFlow colorMode={colorMode} setColorMode={setColorMode}/>
-          <ExportButton elementId={"WhiteBoard"}/>
+          <ColorModeFlow colorMode={colorMode} setColorMode={setColorMode} />
         </ReactFlow>
-      </div>
+      </Box>
     </div>
   );
 };
