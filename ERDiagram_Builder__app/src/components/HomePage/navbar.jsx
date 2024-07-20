@@ -15,6 +15,7 @@ import {
   useColorModeValue,
   useDisclosure,
   Img,
+  Avatar,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -26,7 +27,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
-  const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
+  const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
   return (
     <Box>
@@ -75,30 +76,37 @@ export default function Navbar() {
           justify={"flex-end"}
           direction={"row"}
           spacing={6}
+          align={"center"}
         >
           {isAuthenticated ? (
-            <Button
-              as={"a"}
-              fontSize={"sm"}
-              fontWeight={400}
-              variant={"link"}
-              onClick={() => logout({ returnTo: window.location.origin })}
-            >
-              Log Out
-            </Button>
+            <>
+              <Avatar size={"sm"} name={user.name} src={user.picture} mx={-5} />
+              <Text fontSize={"sm"} fontWeight={400}>
+                {user.name}
+              </Text>
+              <Button
+                // as={"a"}
+                fontSize={"sm"}
+                fontWeight={400}
+                // variant={"link"}
+                onClick={() => logout({ returnTo: window.location.origin })}
+              >
+                Log Out
+              </Button>
+            </>
           ) : (
             <>
               <Button
-                as={"a"}
+                // as={"a"}
                 fontSize={"sm"}
                 fontWeight={400}
-                variant={"link"}
+                // variant={"link"}
                 onClick={() => loginWithRedirect()}
               >
                 Log In
               </Button>
               <Button
-                as={"a"}
+                // as={"a"}
                 display={{ base: "none", md: "inline-flex" }}
                 fontSize={"sm"}
                 fontWeight={600}
