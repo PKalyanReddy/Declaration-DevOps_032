@@ -21,13 +21,14 @@ https://er-diagram-builder01.netlify.app/
 ## Directory Structure
 
 ERDiagram_Builder__app/
-
 ├── public/
+
 ├── src/
+
 │   ├── Pages/
 
-
 │   │   ├── AllRoutes.jsx
+
 │   │   ├── PrivateRoute.jsx
 
 │   ├── assets/
@@ -44,30 +45,55 @@ ERDiagram_Builder__app/
 │   │   │   ├── Shape.jsx
 
 │   │   ├── ColorMode/
+
 │   │   │   ├── ColorModeFlow.jsx
+
 │   │   ├── ExportButton/
+
 │   │   │   ├── ExportButton.jsx
+
 │   │   ├── HomePage/
+
 │   │   │   ├── HomePage.jsx
+
 │   │   |   ├── Main.jsx
+
 │   |   |   ├── auth_config.json
+
 │   |   |   ├── footer.jsx
+
 │   |   |   ├── navbar.jsx
+
 │   |   ├── Template/
+
 │   │   |   ├── Template.jsx
+
 │   |   ├── WhiteSpace/
+
 │   │   |   ├── WhiteSpace.jsx
+
 │   ├── App.css
+
 │   ├── App.jsx
+
 │   ├── index.css
+
 │   ├── main.jsx
+
 ├── .eslintrc.cjs
+
 ├── .gitignore
+
 ├── README.md
+
 ├── index.html
+
 ├── package-lock.json
+
 ├── package.json
+
 ├── vite.config.js
+
 ├── README.md
 
 1. Clone the repository using the bash command mentioned below.
