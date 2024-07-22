@@ -23,10 +23,9 @@ https://er-diagram-builder01.netlify.app/
 ERDiagram_Builder__app/
 
 ├── public/
-
 ├── src/
-
 │   ├── Pages/
+
 
 │   │   ├── AllRoutes.jsx
 │   │   ├── PrivateRoute.jsx
