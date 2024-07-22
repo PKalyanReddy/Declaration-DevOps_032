@@ -19,6 +19,47 @@ https://er-diagram-builder01.netlify.app/
 ```
 
 ## Directory Structure
+
+ERDiagram_Builder__app/
+├── public/
+├── src/
+│   ├── Pages/
+│   │   ├── AllRoutes.jsx
+│   │   ├── PrivateRoute.jsx
+│   ├── assets/
+│   ├── components/
+│   │   ├── AboutAndWork/
+│   │   │   ├── About.jsx
+│   │   │   ├── WorkingProcess.jsx
+│   │   ├── Another/
+│   │   │   ├── Shape.jsx
+│   │   ├── ColorMode/
+│   │   │   ├── ColorModeFlow.jsx
+│   │   ├── ExportButton/
+│   │   │   ├── ExportButton.jsx
+│   │   ├── HomePage/
+│   │   │   ├── HomePage.jsx
+│   │   |   ├── Main.jsx
+│   |   |   ├── auth_config.json
+│   |   |   ├── footer.jsx
+│   |   |   ├── navbar.jsx
+│   |   ├── Template/
+│   │   |   ├── Template.jsx
+│   |   ├── WhiteSpace/
+│   │   |   ├── WhiteSpace.jsx
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   ├── main.jsx
+├── .eslintrc.cjs
+├── .gitignore
+├── README.md
+├── index.html
+├── package-lock.json
+├── package.json
+├── vite.config.js
+├── README.md
+
 1. Clone the repository using the bash command mentioned below.
 2. Change the directory within "Declaration-DevOps_032" using the following bash command.
 
@@ -41,23 +82,27 @@ Key features of the application.
 ### Design Decisions and Assumptions
 
 1. **Front-End Development**:
-   - **HTML**: Structure and layout of web pages.
-   - **CSS**: Styling and responsive design for a visually appealing and user-friendly interface.
-   - **ReactJS**: Dynamic content and interactivity, including form validation and real-time seat selection updates.
+   - **ReactJS**: React & Redux for managing complex state application .
+   - **ChakraUI**: Styling and responsive design for a visually appealing and user-friendly interface.
 
-2. **Authentication**:
-   - **Mock Data**: Used for development and testing to simulate backend responses without needing a live server.
-   - **Flexibility**: Allows front-end and back-end development to proceed concurrently.
-
+2. **Performance Considerations**:
+   - Efficient data handling and minimal re-renders using Redux and React hooks.
+   - Optimized for fast load times and smooth interactions.
+   
 3. **User Authentication**:
    - Secure login system to ensure personalized experiences and data privacy.
 
 4. **Real-Time Updates**:
    - Real-time seat availability and booking confirmations to provide accurate and immediate feedback to users.
 
-5. **Responsive Design**:
+5. **WhiteBoard & Custom Template**:
+   - Users can create new ER diagrams, edit existing ones, and delete diagrams.
+   - Add node of different shapes & every shape represents different entity relationship.
+   - Can connect to node using links and can remove it by on click link & backspace button.
+
+6.  **Responsive Design**:
    - Ensuring compatibility across various devices, including desktops, tablets, and smartphones for a seamless user experience.
-   - 
+     
 ## Credentials
 
 #### Github Repository Link
@@ -74,6 +119,10 @@ https://github.com/PKalyanReddy/Declaration-DevOps_032.git
 ![Screenshot 2024-07-22 151041](https://github.com/user-attachments/assets/40410630-6050-4e34-a705-556321156852)
 
 
+## Project Collaborators
+Pavan Kalyan-PKalyanReddy
+Ritik Sonwani-Ritik26052000
+Shaik Faheem-ShaikFaheemuddin789
 
 
 
