@@ -14,7 +14,7 @@ Technologies used in the project.
 
 ## Deployed App 
 ```bash
-
+https://er-diagram-builder01.netlify.app/
 ```
 
 ## Directory Structure
@@ -44,8 +44,6 @@ https://github.com/PKalyanReddy/Declaration-DevOps_032.git
 ```
 
 ## Glimpse of our project
-
-
 
 
 
