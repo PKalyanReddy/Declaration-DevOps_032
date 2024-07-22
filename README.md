@@ -19,7 +19,7 @@ https://er-diagram-builder01.netlify.app/
 ```
 
 ## Directory Structure
-
+![Screenshot 2024-07-22 171812](https://github.com/user-attachments/assets/f01f3add-97e3-4c2c-9a06-ab9d161c4c99)
 
 1. Clone the repository using the bash command mentioned below.
 2. Change the directory within "Declaration-DevOps_032" using the following bash command.
