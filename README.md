@@ -68,6 +68,10 @@ https://github.com/PKalyanReddy/Declaration-DevOps_032.git
 ## Glimpse of our project
 
 ![Screenshot 2024-07-22 150800](https://github.com/user-attachments/assets/207d5678-67f1-4ec7-a2c4-0a6c31744474)
+![Screenshot 2024-07-22 163314](https://github.com/user-attachments/assets/8b4e35d7-a272-427a-80bb-2143e3684e21)
+![Screenshot 2024-07-22 150843](https://github.com/user-attachments/assets/0e957342-6971-44f0-892e-7bdb97d28695)
+![Screenshot 2024-07-22 150952](https://github.com/user-attachments/assets/6afba1a9-fb90-402d-bb4b-570f2475b588)
+![Screenshot 2024-07-22 151041](https://github.com/user-attachments/assets/40410630-6050-4e34-a705-556321156852)
 
 
 
