@@ -21,8 +21,11 @@ https://er-diagram-builder01.netlify.app/
 ## Directory Structure
 
 ERDiagram_Builder__app/
+
 ├── public/
+
 ├── src/
+
 │   ├── Pages/
 │   │   ├── AllRoutes.jsx
 │   │   ├── PrivateRoute.jsx
