@@ -36,7 +36,28 @@ Key features of the application.
 3. **Adding relationships**: Add entities, attributes, and relationships (one-to-one, one-to-many, many-to-many).
 4. **Exporting Diagrams**: Export diagrams in different formats (e.g., PNG, PDF).
 5. **Custom Template**: Users can work on template diagrams and edit it.
-    
+
+## Design decisions or Assumptions
+### Design Decisions and Assumptions
+
+1. **Front-End Development**:
+   - **HTML**: Structure and layout of web pages.
+   - **CSS**: Styling and responsive design for a visually appealing and user-friendly interface.
+   - **ReactJS**: Dynamic content and interactivity, including form validation and real-time seat selection updates.
+
+2. **Authentication**:
+   - **Mock Data**: Used for development and testing to simulate backend responses without needing a live server.
+   - **Flexibility**: Allows front-end and back-end development to proceed concurrently.
+
+3. **User Authentication**:
+   - Secure login system to ensure personalized experiences and data privacy.
+
+4. **Real-Time Updates**:
+   - Real-time seat availability and booking confirmations to provide accurate and immediate feedback to users.
+
+5. **Responsive Design**:
+   - Ensuring compatibility across various devices, including desktops, tablets, and smartphones for a seamless user experience.
+   - 
 ## Credentials
 
 #### Github Repository Link
