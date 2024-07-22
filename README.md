@@ -23,18 +23,27 @@ https://er-diagram-builder01.netlify.app/
 ERDiagram_Builder__app/
 
 ├── public/
+
 ├── src/
 
 │   ├── Pages/
+
 │   │   ├── AllRoutes.jsx
 │   │   ├── PrivateRoute.jsx
+
 │   ├── assets/
+
 │   ├── components/
+
 │   │   ├── AboutAndWork/
+
 │   │   │   ├── About.jsx
 │   │   │   ├── WorkingProcess.jsx
+
 │   │   ├── Another/
+
 │   │   │   ├── Shape.jsx
+
 │   │   ├── ColorMode/
 │   │   │   ├── ColorModeFlow.jsx
 │   │   ├── ExportButton/
@@ -122,8 +131,11 @@ https://github.com/PKalyanReddy/Declaration-DevOps_032.git
 
 
 ## Project Collaborators
+
 Pavan Kalyan-PKalyanReddy
+
 Ritik Sonwani-Ritik26052000
+
 Shaik Faheem-ShaikFaheemuddin789
 
 
