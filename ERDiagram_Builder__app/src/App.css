@@ -23,3 +23,20 @@ input {
   outline: none;
   border: 1px solid gray;
 }
+
+@media(width<=650px) {
+  .White-space {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  
+}

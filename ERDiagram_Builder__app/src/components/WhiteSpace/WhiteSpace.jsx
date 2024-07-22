@@ -36,11 +36,6 @@ const WhiteSpace = () => {
   const [newLabel, setNewLabel] = useState("");
   const [colorMode, setColorMode] = useState("dark");
 
-  // const onConnect = useCallback(
-  //   (params) =>
-  //     setEdges((eds) => addEdge({ ...params, type: "smoothstep" }, eds)),
-  //   [setEdges]
-  // );
   const onConnect = useCallback(
     (params) => {
       setEdges((eds) =>
@@ -110,7 +105,7 @@ const WhiteSpace = () => {
         className="sidebar"
         style={{ position: "relative", top: 0, left: 0, zIndex: 10 }}
       >
-        <h2>Tools</h2>
+        <h1 style={{fontSize:'20px', fontWeight: "bold", fontFamily:'sans-serif'}}>Shapes / Tools</h1>
         <button onClick={() => addNode("rectangle")}>Add Rectangle</button>
         <button onClick={() => addNode("parallelogram")}>Add Parallelogram</button>
         <button onClick={() => addNode("circle")}>Add Circle</button>
@@ -144,7 +139,7 @@ const WhiteSpace = () => {
         id="whiteBoard"
         style={{
           width: "80%",
-          height: "100vh",
+          height: "90vh",
           border: "1px solid",
           backgroundColor: colorMode === "dark" ? "#333" : "#fff",
         }}

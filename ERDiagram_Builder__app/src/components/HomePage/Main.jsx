@@ -5,7 +5,6 @@ export default function Main() {
   const navigate = useNavigate();
 
   const handleClickManual = () => {
-    console.log("move to WhiteSpace");
     navigate("/whiteSpace/path");
   };
   const handleClickCustom = () => {

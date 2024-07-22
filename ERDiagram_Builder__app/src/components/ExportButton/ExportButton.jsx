@@ -4,9 +4,7 @@ import jsPDF from "jspdf";
 
 export const ExportButton = ({ elementId }) => {
   const exportToPdf = async () => {
-    // console.log(elementId);
     const element = document.getElementById(elementId);
-    // console.log(element);
     if (!element) return;
 
     const pdf = new jsPDF("p", "pt", "a4");

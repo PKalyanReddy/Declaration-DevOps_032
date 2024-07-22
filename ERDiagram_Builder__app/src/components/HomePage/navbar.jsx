@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Box,
   Flex,
@@ -16,6 +14,7 @@ import {
   useDisclosure,
   Img,
   Avatar,
+  Center,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -24,10 +23,16 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 import { useAuth0 } from "@auth0/auth0-react";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
+  const navigate = useNavigate();
+
+  const moveToHomepage = () => {
+    navigate("/");
+  };
 
   return (
     <Box
@@ -51,6 +56,7 @@ export default function Navbar() {
           flex={{ base: 1, md: "auto" }}
           ml={{ base: -2 }}
           display={{ base: "flex", md: "none" }}
+          alignItems={'center'}
         >
           <IconButton
             onClick={onToggle}
@@ -61,18 +67,29 @@ export default function Navbar() {
             aria-label={"Toggle Navigation"}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-        <Box width={'80px'} height={'20px'} objectFit={"cover"} marginTop={'-6px'} >
-
-          <Img
-            src="https://i.ibb.co/Y4Shmrm/ER-Diagram-logo.jpg"
-            objectFit="cover"
-            alt="logo"
-            width="80px"
-          />
+        <Flex
+          flex={{ base: 1 }}
+          justify={{ base: "center", md: "start" }}
+          alignItems={"center"}
+        >
+          <Box
+            width={"80px"}
+            height={"20px"}
+            objectFit={"cover"}
+            marginTop={"-7"}
+            mx={"20px"}
+            onClick={moveToHomepage}
+            cursor={"pointer"}
+          >
+            <Img
+              src="https://i.ibb.co/QDsxsN1/Screenshot-2024-07-22-112414.png"
+              objectFit="cover"
+              alt="logo"
+              width="80px"
+            />
           </Box>
 
-          <Flex display={{ base: "none", md: "flex" }} ml={1} mt={3}>
+          <Flex display={{ base: "none", md: "flex" }} ml={1} mt={6}>
             <DesktopNav />
           </Flex>
         </Flex>
@@ -143,20 +160,21 @@ const DesktopNav = () => {
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
-              <Box
+              <NavLink
                 as="a"
                 p={2}
                 href={navItem.href ?? "#"}
                 fontSize={"md"}
                 fontWeight={500}
                 color={linkColor}
+                to={navItem.href}
                 _hover={{
                   textDecoration: "none",
                   color: linkHoverColor,
                 }}
               >
                 {navItem.label}
-              </Box>
+              </NavLink>
             </PopoverTrigger>
 
             {navItem.children && (
@@ -290,10 +308,10 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: "About us",
-    href: "#",
+    href: "/About",
   },
   {
     label: "How it works",
-    href: "#",
+    href: "/Work",
   },
 ];

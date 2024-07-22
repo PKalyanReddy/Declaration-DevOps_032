@@ -6,12 +6,11 @@ const PrivateRoute = ({children}) => {
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
   if(isAuthenticated){
-    console.log(isAuthenticated)
     return children;
   }
-//   else{
-//     return <Navigate to={'/navbar'}/>
-//   }
+  else{
+    return <Navigate to={'/'}/>
+  }
 }
 
 export default PrivateRoute
