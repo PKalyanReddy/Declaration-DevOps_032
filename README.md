@@ -2,6 +2,7 @@
 # ER Diagram Builder
 
 ## Introduction
+ER diagram looks very similar to the flowchart. However, ER Diagram includes many specialized symbols, and its meanings make this model unique. The purpose of ER Diagram is to represent the logical structure & entity framework infrastructure.
 
 
 ## Project Type
@@ -45,8 +46,8 @@ https://github.com/PKalyanReddy/Declaration-DevOps_032.git
 
 ## Glimpse of our project
 
-
-
+![image](https://ibb.co/gyfkT7n)
+![image]()
 
 
 
