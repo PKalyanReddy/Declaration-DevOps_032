@@ -31,10 +31,10 @@ npm run dev
 ## Features
 Key features of the application.
 1. **User Authentication**: Allow users to secure login and account management, sign up, and log out.
-2.**Diagram Creation and Editing**: Users can create new ER diagrams, edit existing ones, and delete diagrams.
-3.**Adding relationships**: Add entities, attributes, and relationships (one-to-one, one-to-many, many-to-many).
-4.**Exporting Diagrams**: Export diagrams in different formats (e.g., PNG, PDF).
-5.**Custom Template**: Users can work on template diagrams and edit it.
+2. **Diagram Creation and Editing**: Users can create new ER diagrams, edit existing ones, and delete diagrams.
+3. **Adding relationships**: Add entities, attributes, and relationships (one-to-one, one-to-many, many-to-many).
+4. **Exporting Diagrams**: Export diagrams in different formats (e.g., PNG, PDF).
+5. **Custom Template**: Users can work on template diagrams and edit it.
     
 ## Credentials
 
